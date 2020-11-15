@@ -1,0 +1,29 @@
+@bg-grid-color: rgba(215, 200, 255, 1);
+@bg-column-width: ~"calc(100% - "@grid-gutter~")";
+
+[data-debug-layout="true"]:before {
+  content: '';
+  position: fixed;
+  width: auto;
+  margin: 0 auto;
+  top: 0;
+  left: @page-gutter;
+  right: ~"calc(" @page-gutter ~" - " @grid-gutter ~")";
+  bottom: 0;
+  z-index: 1;
+  opacity: 0.15;
+  background-size: (100% / @grid-columns) auto;
+  background-image: linear-gradient(to right, currentColor @bg-column-width, transparent 1px);
+  pointer-events: none;
+  mix-blend-mode: multiply;
+
+  .mq-xl({ color: mix(@debug-blue, @debug-green, 00%); });
+
+  .mq-lg({ color: mix(@debug-blue, @debug-green, 25%); });
+
+  .mq-md({ color: mix(@debug-blue, @debug-green, 50%); });
+
+  .mq-sm-down({ color: mix(@debug-blue, @debug-green, 75%); });
+
+  .mq-xs({ color: mix(@debug-blue, @debug-green, 100%) });
+}

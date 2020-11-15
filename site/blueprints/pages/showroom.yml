@@ -1,0 +1,23 @@
+title: Showroom
+preset: page
+status:
+  draft: true
+  unlisted:
+    label: Hidden Page
+    text: The page is not listed in the main menu
+  listed:
+    label: Listed Page
+    text: The page is listed in the main menu
+pages:
+  template: default
+fields:
+  showroomHello:
+    label: Showroom Hello
+    type: textarea
+    size: medium
+  showroomAddress:
+    label: Showroom Address
+    type: textarea
+  showroomHours:
+    label: Showroom Hours
+    type: textarea

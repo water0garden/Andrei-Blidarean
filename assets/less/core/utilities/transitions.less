@@ -1,0 +1,13 @@
+.transition(@transition: all 0.3s ease) {
+  -webkit-transition: @transition;
+  transition: @transition;
+}
+
+.transitionfix() {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.timing(@timing) {
+  transition-timing-function: @timing;
+}

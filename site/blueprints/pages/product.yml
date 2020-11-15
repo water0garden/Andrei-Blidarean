@@ -1,0 +1,42 @@
+title: Product
+preset: page
+status:
+  draft: true
+  unlisted:
+    label: Hidden Page
+    text: The page is not listed in the main menu
+  listed:
+    label: Listed Page
+    text: The page is listed in the main menu
+pages: false
+fields:
+  # price:
+  #   label: Price
+  #   type: number
+  #   before: $
+  #   after: NZD
+  #   width: 1/2
+  shopifyID:
+    label: Shopify Product ID
+    type: number
+    help: Get the Shopify ID from the URL bar in editing a product in Shopify
+  description:
+    label: Description
+    type: structure
+    fields:
+      subhead:
+        label: Subhead
+        type: text
+      detail:
+        label: Detail
+        type: textarea
+  # sizing:
+  #   label: Sizing
+  #   type: structure
+  #   fields:
+  #     sizeOption:
+  #       label: Size Option
+  #       type: textarea
+  # details:
+  #   label: Details
+  #   type: textarea

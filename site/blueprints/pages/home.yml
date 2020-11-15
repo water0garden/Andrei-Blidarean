@@ -1,0 +1,41 @@
+title: Home
+preset: page
+status:
+  draft: true
+  unlisted:
+    label: Hidden Page
+    text: The page is not listed in the main menu
+  listed:
+    label: Menu Page
+    text: The page is listed in the main menu
+pages: false
+fields:
+  introductionText:
+    label: Introduction Text
+    type: textarea
+    size: tiny
+    buttons: false
+  introductionImage:
+    label: Introduction Image
+    type: files
+    mutliple: false
+  featuredProduct:
+    label: Featured Product
+    type: select
+    options: query
+    query: site.find('shop').children
+  featuredProductDescription:
+    label: Featured Product Description
+    type: textarea
+  galleryNotes:
+    label: Gallery Notes
+    type: textarea
+  galleryImages:
+    label: Gallery Images
+    type: files
+    mutliple: true
+  featuredShoot:
+    label: Featured Shoot
+    type: select
+    options: query
+    query: site.find('image').children

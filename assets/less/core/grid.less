@@ -1,0 +1,56 @@
+:root {
+  --grid-gutter: 20px;
+  --page-gutter: 40px;
+}
+
+@grid-columns: 12;
+@grid-gutter: 20px;
+@page-gutter: 20px;
+
+.grid(@colspan){
+  @percentange: percentage(@colspan / @grid-columns );
+  width: @percentange;
+  width: ~"calc(" @percentange ~" - " @grid-gutter ~")";
+  margin-right: @grid-gutter;
+};
+
+.grid(@colspan, @context){
+  @percentange: percentage(@colspan / @context );
+  width: @percentange;
+  width: ~"calc("@percentange ~" - " @grid-gutter ~")";
+  margin-right: @grid-gutter;
+};
+
+.grid-flush(@colspan){
+  @percentange: percentage(@colspan / @grid-columns );
+  width: @percentange;
+  margin-right: 0;
+};
+
+.grid-flush(@colspan, @context){
+  @percentange: percentage(@colspan / @context );
+  width: @percentange;
+};
+
+.max(@colspan){
+  @percentange: percentage(@colspan / @grid-columns );
+  max-width: @percentange;
+  max-width: ~"calc("@percentange ~" - " @grid-gutter ~")";
+  margin-right: @grid-gutter;
+};
+
+.max(@colspan, @context){
+  @percentange: percentage(@colspan / @context );
+  max-width: @percentange;
+  max-width: ~"calc("@percentange ~" - " @grid-gutter ~")";
+  margin-right: @grid-gutter;
+};
+
+.push(@colspan){
+  margin-left: percentage(@colspan / @grid-columns );
+};
+
+.push(@colspan, @context){
+  @percentange: percentage(@colspan / @context );
+  margin-left: @percentange;
+};

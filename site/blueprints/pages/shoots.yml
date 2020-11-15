@@ -1,0 +1,16 @@
+title: Shoots
+options:
+  delete: false
+  changeTemplate: false
+  changeStatus: true
+sections:
+  projects:
+    headline: Shoots
+    type: pages
+    templates: shoot
+    layout: cards
+    image:
+      cover: false
+      ratio: 3/2
+      back: black
+      query: page.images.sortBy('sort', 'asc').first

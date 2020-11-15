@@ -1,0 +1,27 @@
+.x-icon(@stroke-length: 24px, @stroke-width: 2px, @stroke-color: currentColor) {
+  display: block;
+  width: @stroke-length;
+  height: @stroke-length;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: @stroke-length;
+    height: @stroke-width;
+    top: 50%;
+    left: 50%;
+    background: @stroke-color;
+  }
+
+  &:before {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(45deg);
+    transform: translate3d(-50%, -50%, 0) rotate(45deg);
+  }
+
+  &:after {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+    transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+  }
+}

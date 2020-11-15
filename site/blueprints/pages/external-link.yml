@@ -1,0 +1,16 @@
+title: External Link
+preset: page
+status:
+  draft: true
+  unlisted:
+    label: Hidden Page
+    text: The page is not listed in the main menu
+  listed:
+    label: Listed Page
+    text: The page is listed in the main menu
+pages: false
+files: false
+fields:
+  linkTo:
+    label: Link to
+    type: url

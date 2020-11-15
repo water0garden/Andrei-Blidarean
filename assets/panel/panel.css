@@ -1,0 +1,39 @@
+.k-icon[data-back=black],
+.k-image[data-back=pattern] span {
+	background: none;
+	color: #999;
+}
+
+.k-list-item-image .k-icon svg {
+	color: hsla(0, 0%, 50%, 0.5);
+}
+
+.k-status-flag-listed .k-icon {
+    color: #04c85b;
+}
+
+.k-status-flag-unlisted .k-icon {
+    color: #add9ff;
+}
+
+.k-status-flag-draft .k-icon {
+    color: #FF4621;
+}
+
+.k-header-tabs nav,
+.k-tab-button {
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
+    justify-content: left
+}
+
+.k-tab-button {
+	padding: 1rem;
+}
+
+[data-local="true"] .k-topbar,
+[data-local="true"] .k-topbar *,
+[data-local="true"] .k-topbar-signals:before {
+    background:lightgrey!important;
+    color: black;
+}

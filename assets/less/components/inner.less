@@ -1,0 +1,13 @@
+inner {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+inner {
+  width: 100%;
+  padding-left: @page-gutter;
+  padding-right: ~"calc("@page-gutter ~" - " @grid-gutter ~")";
+  .cf();
+}

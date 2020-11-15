@@ -1,0 +1,27 @@
+title: Shoot
+preset: page
+status:
+  draft: true
+  unlisted:
+    label: Hidden Page
+    text: The page is not listed in the main menu
+  listed:
+    label: Listed Page
+    text: The page is listed in the main menu
+pages:
+  template: default
+fields:
+  # text:
+  #   type: textarea
+  #   size: medium
+  description:
+    label: Description
+    type: structure
+    fields:
+      subhead:
+        label: Subhead
+        type: text
+      detail:
+        label: Detail
+        type: textarea
+  

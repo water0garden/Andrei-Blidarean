@@ -1,0 +1,44 @@
+.menu-icon(@length: 32px, @deviation: 6px, @stroke: 2px, @color: currentColor) {
+  display: block;
+  width: @length;
+  height: @length;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  .translateX(0);
+  transition-property: width, transform;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: @length;
+    height: @stroke;
+    top: 50%;
+    background: @color;
+    transition: all 0.2s ease;
+  }
+
+  &:before {
+    .translateY(-@deviation);
+  }
+
+  &:after {
+    .translateY(@deviation);
+  }
+
+  [data-menu-open="true"] & {
+
+    .translateX(0px);
+
+    &:before {
+      .translateY((@deviation*0));
+      .rotate(-45deg);
+    }
+
+    &:after {
+      .translateY(-(@deviation*0));
+      .rotate(45deg);
+    }
+  }
+}

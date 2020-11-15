@@ -1,0 +1,16 @@
+title: Shop Items
+options:
+  delete: false
+  changeTemplate: false
+  changeStatus: true
+sections:
+  projects:
+    headline: Shop Items
+    type: pages
+    templates: product
+    layout: cards
+    image:
+      cover: false
+      ratio: 3/2
+      back: black
+      query: page.images.sortBy('sort', 'asc').first

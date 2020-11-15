@@ -1,0 +1,72 @@
+@debug-blue: #0068e5;
+@debug-yellow: #F8BE15;
+@debug-green: #00c8a9;
+@debug-red: #F21307;
+
+
+[data-debug-layout="true"]:after {
+  content: '';
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 0.5em;
+  font-size: 16px;
+  z-index: 100;
+
+  .mq-xl({
+    content: 'xl: @{w-xl-min} +';
+    color: mix(@debug-blue, @debug-green, 00%);
+   });
+
+  .mq-lg({
+    content: 'lg: @{w-lg-min} - @{w-xl}';
+    color: mix(@debug-blue, @debug-green, 25%);
+   });
+
+  .mq-md({
+    content: 'md: @{w-md-min} - @{w-md-max}';
+    color: mix(@debug-blue, @debug-green, 50%);
+   });
+
+  .mq-sm-down({
+    content: 'sm: 0 - @{w-sm-max}';
+    color: mix(@debug-blue, @debug-green, 75%);
+   });
+
+  .mq-xs({
+    content: 'xs: 0 - @{w-xs-max}';
+    color: mix(@debug-blue, @debug-green, 100%);
+  });
+
+}
+
+[data-debug-outline="true"] > * {
+  outline: 1px solid hsla(0, 100%, 45%, 0.333);
+}
+[data-debug-outline="true"] > * > * {
+  outline: 1px solid hsla(30, 100%, 45%, 0.333);
+}
+[data-debug-outline="true"] > * > * > * {
+  outline: 1px solid hsla(60, 100%, 45%, 0.333);
+}
+[data-debug-outline="true"] > * > * > * > * {
+  outline: 1px solid hsla(90, 100%, 45%, 0.333);
+}
+[data-debug-outline="true"] > * > * > * > * > * {
+  outline: 1px solid hsla(120, 100%, 45%, 0.333);
+}
+[data-debug-outline="true"] > * > * > * > * > * > * {
+  outline: 1px solid hsla(150, 100%, 45%, 0.333);
+}
+[data-debug-outline="true"] > * > * > * > * > * > * > * {
+  outline: 1px solid hsla(180, 100%, 45%, 0.333);
+}
+[data-debug-outline="true"] > * > * > * > * > * > * > * > * {
+  outline: 1px solid hsla(210, 100%, 45%, 0.333);
+}
+[data-debug-outline="true"] > * > * > * > * > * > * > * > * > * {
+  outline: 1px solid hsla(240, 100%, 45%, 0.333);
+}
+[data-debug-outline="true"] > * > * > * > * > * > * > * > * > * > * {
+  outline: 1px solid hsla(270, 100%, 45%, 0.333);
+}
